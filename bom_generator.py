@@ -1,10 +1,8 @@
 import sys
 import os
 import csv
-import sys
 import subprocess
 import platform
-import webbrowser
 from platform import python_version
 try:
     import kicad_netlist_reader
@@ -15,7 +13,6 @@ except ImportError:
 
 
 def open_file(folder, file):
-    print(platform.system())
     if platform.system() == "Windows":
         os.startfile(folder)
     elif platform.system() == "Darwin":
